@@ -1,0 +1,73 @@
+# ╭──────────────────────────────────────────────────╮
+# │  Pyprland Configuration                          │
+# │  Adds powerful plugins like scratchpads & expose.│
+# │                                                  │
+# │  Maintained by @liyankova                        │
+# ╰──────────────────────────────────────────────────╯
+
+[pyprland]
+# A selection of productive plugins.
+plugins = [
+    "scratchpads",
+    "expose",
+    "toggle_special",
+    "fetch_client_menu",
+    "magnify",
+    "lost_windows"
+]
+
+[expose]
+# Optional: Don't show scratchpads in the expose view.
+include_special = false
+
+# -----------------------------------------------------
+# [Scratchpads]
+# Define our dropdown/popup windows here.
+# -----------------------------------------------------
+
+[scratchpads.term]
+# The main dropdown terminal.
+animation = "fromTop"
+command = "kitty --class kitty-scratchpad" # Use a unique class
+class = "kitty-scratchpad"
+size = "80% 60%"
+lazy = true # Doesn't launch until first use
+
+[scratchpads.volume]
+# A popup for audio control.
+animation = "fromRight"
+command = "pavucontrol"
+class = "Pavucontrol" # Note: class names are case-sensitive
+size = "30% 80%"
+lazy = true
+unfocus = "hide" # Hides the scratchpad when it loses focus
+
+[scratchpads.files]
+# A scratchpad for the file manager.
+animation = "fromLeft"
+command = "thunar"
+class = "Thunar"
+size = "80% 80%"
+lazy = true
+unfocus = "hide"
+# [pyprland]
+# plugins = ["scratchpads", "expose", "toggle_special"]
+#
+# [pyprland.variables]
+# gemini = "firefox"
+#
+# [scratchpads.term]
+# command = "kitty --class scratchpad"
+# lazy = true
+#
+# [expose]
+# include_special = false
+#
+# [toggle_special]
+#
+# [scratchpads.gemini]
+# command = "firefox --new-window https://gemini.google.com"
+# class = "firefox"
+# # lazy = true
+# process_tracking = false
+

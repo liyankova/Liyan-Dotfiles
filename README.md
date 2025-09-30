@@ -2,8 +2,6 @@
 
 A clean, dynamic, and productive Hyprland setup. This configuration is themed on the fly using **Wallust**, creating a cohesive look and feel based on the current wallpaper. It is managed using **GNU Stow**.
 
-![scrot-placeholder](https://user-images.githubusercontent.com/assets/placeholder.png)
-*(Feel free to replace this with a screenshot of your desktop!)*
 
 ---
 
@@ -63,7 +61,7 @@ Clone this repository into your home directory.
 
 ```bash
 cd ~
-git clone [https://github.com/liyankova/dotfiles.git](https://github.com/liyankova/dotfiles.git)
+git clone [https://github.com/liyankova/Liyan-Dotfiles.git](https://github.com/liyankova/Liyan-Dotfiles.git)
 ```
 
 ### 2. Backup Existing Configs (Optional but Recommended)

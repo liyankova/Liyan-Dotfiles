@@ -1,0 +1,15 @@
+@keyframes animated-border-color {
+    0% { border-color: {{color1}}; }
+    25% { border-color: {{color4}}; }
+    50% { border-color: {{color12}}; }
+    75% { border-color: {{color14}}; }
+    100% { border-color: {{color1}}; }
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    animation: animated-border-color 10s linear infinite;
+}

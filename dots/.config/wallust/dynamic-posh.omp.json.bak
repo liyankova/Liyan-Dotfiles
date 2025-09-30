@@ -1,0 +1,62 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "{{color4}}", // Aksen cerah pertama
+          "foreground": "{{foreground}}", // Teks terang untuk kontras
+          "properties": {
+            "arch": "\uf303",
+            "linux": "\ue712",
+            "windows": "\ue70f"
+          },
+          "style": "diamond",
+          "leading_diamond": "\u256d\u2500\ue0b2",
+          "template": " {{ .Icon }} ",
+          "type": "os"
+        },
+        {
+          "background": "{{color7}}", // Warna netral terang
+          "foreground": "{{background}}", // Teks gelap untuk kontras
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "template": " {{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "background": "{{color2}}", // Aksen warna kedua
+          "foreground": "{{foreground}}",
+          "properties": {
+            "style": "agnoster_short",
+            "max_depth": 3
+          },
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "template": " \uf115 {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "{{color3}}", // Aksen warna ketiga
+          "foreground": "{{foreground}}",
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#a97400{{ end }}"
+          ],
+          "properties": {
+            "fetch_status": true
+          },
+          "style": "diamond",
+          "leading_diamond": "<transparent,background>\ue0b0</>",
+          "template": " {{ .HEAD }} ",
+          "trailing_diamond": "\ue0b0",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}

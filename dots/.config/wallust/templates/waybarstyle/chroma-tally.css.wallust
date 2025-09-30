@@ -1,0 +1,156 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Wallust - Chroma Tally - STATIC VERSION */
+
+@import "/home/liyan/.config/waybar/wallust/colors-waybar.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    min-height: 0;
+    font-size: 97%;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+/* 1. ANIMASI DIPERBAIKI: Sintaks {{color}} diubah menjadi @color */
+@keyframes slow-chromatic-shift {
+    0%    { border-color: @color1; }
+    12.5% { border-color: @color2; }
+    25%   { border-color: @color3; }
+    37.5% { border-color: @color4; }
+    50%   { border-color: @color5; }
+    62.5% { border-color: @color6; }
+    75%   { border-color: @color14; }
+    87.5% { border-color: @color7; }
+    100%  { border-color: @color1; }
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    animation: slow-chromatic-shift 18s linear infinite;
+}
+
+
+
+/* 2. GAYA WORKSPACE DIGABUNGKAN: Konflik aturan diselesaikan di sini */
+/* --- Workspaces --- */
+#workspaces {
+    background: transparent;
+    padding: 2px;
+    margin: 0 4px;
+    border-radius: 15px;
+    font-style: normal;
+}
+
+#workspaces button {
+    padding: 0px 8px;
+    margin: 3px 3px;
+    border-radius: 12px;
+    border: none;
+    color: @foreground;
+    background: linear-gradient(120deg, @color2, @color4, @color6, @color7);
+    background-size: 200% auto;
+    background-position: 0% 0%;
+    opacity: 0.6;
+    transition: all 0.4s ease-in-out;
+    /* Kursor tangan ditambahkan agar interaktif */
+  
+}
+
+#workspaces button:hover {
+    opacity: 1;
+    background-position: 100% 0%;
+   
+}
+
+#workspaces button.active {
+    /* PERUBAHAN UTAMA: Gradien baru yang hanya menggunakan warna-warna aman */
+    background: linear-gradient(135deg, @color2, @color4);
+    background-size: 100% auto;
+    opacity: 1.0;
+    color: @background;
+    min-width: 40px;
+    padding: 0px 12px;
+    text-shadow: none;
+}
+
+tooltip {
+    background: #1e1e2e;
+    opacity: 0.8;
+    border-radius: 6px;
+}
+
+/* 3. STRUKTUR ASLI DIKEMBALIKAN: Blok padding raksasa ini dikembalikan seperti semula */
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+ 
+/* 4. LAPISAN AMAN DITERAPKAN: Hanya pada modul teks penting, tidak termasuk workspace */
+#clock, #pulseaudio, #network, #cpu, #memory {
+    color: #FFFFFF; 
+    background-color: rgba(0, 0, 0, 0.45); 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    padding: 0 10px; /* Padding khusus untuk modul aman */
+    margin: 3px 2px;
+    border-radius: 8px;
+}

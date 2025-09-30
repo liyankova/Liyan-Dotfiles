@@ -7,12 +7,12 @@
 #!/bin/bash
 
 # Terminate existing instances
-pkill waybar
+# pkill waybar
 pkill swaync
 
 # Wait a moment for processes to terminate
 sleep 0.5
 
 # Relaunch components
-waybar &
+# waybar &
 swaync &

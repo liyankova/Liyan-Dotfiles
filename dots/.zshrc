@@ -22,6 +22,7 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools"
      export GOROOT=/usr/lib/go
     export GOPATH=$HOME/go
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH="/usr/local/bin:$PATH"
 
 
 # ===================================================================
