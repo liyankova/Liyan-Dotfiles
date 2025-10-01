@@ -19,9 +19,9 @@ export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.local/bin:$PATH" # Dari pipx
 export PATH="$PATH:$HOME/SDKs/flutter/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
-     export GOROOT=/usr/lib/go
-    export GOPATH=$HOME/go
-    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH="/usr/local/bin:$PATH"
 
 
@@ -29,11 +29,11 @@ export PATH="/usr/local/bin:$PATH"
 # 3. OH MY ZSH CONFIGURATION
 # ===================================================================
 # Tema Oh My Zsh dinonaktifkan untuk memberi jalan pada Oh My Posh.
-# ZSH_THEME="agnosterzak"
+# ZSH_THEME="agnoster"
 
 plugins=(
-    git
-    archlinux
+    # git
+    # archlinux
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -94,8 +94,20 @@ export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always {}' --preview-window 'r
 eval "$(zoxide init zsh)"
 
 # -- Oh My Posh Prompt --
-#eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/quick-term.omp.json)"
-eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/wallust.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/microverse-power.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/wallust.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/caelestia.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/forczsh.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/gruvbox.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/iterm2.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/jblab.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/markbull.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/paradox.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/pl10k.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/quickterm.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/unicorn.omp.json)"
+
+
 
 # ===================================================================
 # 6. HISTORY SETTINGS

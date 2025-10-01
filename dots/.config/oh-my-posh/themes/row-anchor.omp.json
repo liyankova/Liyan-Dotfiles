@@ -1,0 +1,111 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "os",
+          "style": "diamond",
+          "leading_diamond": "\u256d\u2500\ue0b2",
+          "background": "blue",
+          "foreground": "white",
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "windows": "\ue70f"
+          },
+          "template": " {{ .Icon }} "
+        },
+        {
+          "type": "session",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "background": "green",
+          "foreground": "black",
+          "template": " {{ .UserName }} "
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "background": "yellow",
+          "foreground": "black",
+          "properties": {
+            "style": "agnoster_short",
+            "max_depth": 3,
+            "folder_icon": "\u2026",
+            "folder_separator_icon": " <transparent>\ue0b1</> "
+          },
+          "template": " {{ .Path }} "
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "leading_diamond": "<transparent,background>\ue0b0</>",
+          "trailing_diamond": "\ue0b0",
+          "background": "magenta",
+          "foreground": "white",
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}red{{ end }}"
+          ],
+          "properties": {
+            "branch_template": "{{ trunc 25 .Branch }}",
+            "fetch_status": true,
+            "branch_icon": "\uf418 ",
+            "branch_identical_icon": "\uf444",
+            "branch_gone_icon": "\ueab8"
+          },
+          "template": " {{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "style": "diamond",
+          "invert_powerline": true,
+          "trailing_diamond": "\ue0b0",
+          "background": "blue",
+          "foreground": "white",
+          "properties": {
+            "time_format": "15:04:05"
+          },
+          "template": " \uf073 {{ .CurrentDate | date .Format }} "
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "cyan",
+          "style": "plain",
+          "template": "\u2570\u2500 {{ if .Root }}#{{ else }}${{ end }}",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 3
+}
