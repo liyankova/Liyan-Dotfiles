@@ -30,7 +30,7 @@ include_special = false
 animation = "fromTop"
 command = "kitty --class kitty-scratchpad" # Use a unique class
 class = "kitty-scratchpad"
-size = "80% 60%"
+size = "40% 50%"
 lazy = true # Doesn't launch until first use
 
 [scratchpads.volume]
