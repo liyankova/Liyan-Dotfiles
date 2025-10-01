@@ -10,7 +10,7 @@
           "style": "diamond",
           "leading_diamond": "\u256d\u2500\ue0b2",
           "background": "blue",
-          "foreground": "white",
+          "foreground": "black",
           "properties": {
             "alpine": "\uf300",
             "arch": "\uf303",
@@ -42,8 +42,8 @@
           "type": "path",
           "style": "powerline",
           "powerline_symbol": "\ue0b0",
-          "background": "blue",
-          "foreground": "white",
+          "background": "lightBlue",
+          "foreground": "black",
           "properties": {
             "style": "agnoster_short",
             "max_depth": 3,
@@ -60,7 +60,7 @@
             "{{ if gt .Ahead 0 }}#89d1dc{{ end }}",
             "{{ if gt .Behind 0 }}#4e9a06{{ end }}"
           ],
-          "foreground": "#000000",
+          "foreground": "white",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "branch_icon": "\uf126 ",
